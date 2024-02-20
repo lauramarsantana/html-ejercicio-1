@@ -53,11 +53,11 @@ tr:hover td {
     color: white;
 }
 
-#buttonsubmit:hover {
+.buttonsubmit:hover {
     background-color: #05607F;
 }
 
-#buttonsubmit {
+.buttonsubmit {
     width: 80%; /* Ajustar el ancho */
     height: 30px;
     border-bottom: solid 2px rgba(255, 255, 255, 0.4);

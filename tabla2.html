@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Laura Santana</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="styletabla2.css">
+		<script src="tabla2js.js"></script>
 	</head>
 	
 
@@ -13,72 +14,47 @@
 			<br>
 			<br>
 			<table>
-				<thead align="center">
-					<tr>
-						<th colspan="3" align="center"> ESTUDIANTES </th>
-					</tr>
-					<tr>
-						<th> Nombre </th>
-						<th> Apellido </th>
-						<th> foto</th>
+				<form id="form" action="tabla3.html" enctype="multipart/form-data" method="get">
+					<thead align="center">
+						<tr>
+							<th colspan="3" align="center"> ESTUDIANTES </th>
+						</tr>
+						<tr>
+							<th> Nombre </th>
+							<th> Apellido </th>
+							<th> Foto</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> <input type="text" id="name1" name="name1" placeholder="Ingrese el nombre 1"> </td>
+							<td> <input type="text" id="lastname1" name="lastname1" placeholder="Ingrese el apellido 1"> </td>
+							<th rowspan="5"> <img src="icono.png" width="100%"/> </th>
+						</tr>
+						<tr>
+							<td> <input type="text" id="name2" name="name2" placeholder="Ingrese el nombre 2"> </td>
+							<td> <input type="text" id="lastname2" name="lastname2" placeholder="Ingrese el apellido 2"> </td>
+						</tr>
+						<tr>
+							<td> <input type="text" id="name3" name="name3" placeholder="Ingrese el nombre 3"> </td>
+							<td> <input type="text" id="lastname3" name="lastname3" placeholder="Ingrese el apellido 3"> </td>
+						</tr>
+						<tr>
+							<td> <input type="text" id="name4" name="name4" placeholder="Ingrese el nombre 4"> </td>
+							<td> <input type="text" id="lastname4" name="lastname4" placeholder="Ingrese el apellido 4"> </td>
+						</tr>
+						<tr>
+							
+							<td colspan="2" align="center">
+								<input id="buttonsubmit" type="submit" value="enviar" onClick="validarForm()"></input>
+							</td>
+						</tr>
 						
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td> <label id="name1"> inserte Nombre1 </label> </td>
-						<td> <label id="lastName1"> inserte Apellido1 </label>  </td>
-						<th rowspan="5"> <img src="icono.png" width="100%"/> </th>
-					</tr>
-					<tr>
-						<td> <label id="name2"> inserte Nombre2 </label> </td>
-						<td> <label id="lastName2"> inserte Apellido2 </label>  </td>
-					</tr>
-					<tr>
-						<td> <label id="name3"> inserte Nombre3 </label> </td>
-						<td> <label id="lastName3"> inserte Apellido3 </label>  </td>
-					</tr>
-					<tr>
-						<td> <label id="name4"> inserte Nombre4 </label> </td>
-						<td> <label id="lastName4"> inserte Apellido4 </label>  </td>
-					</tr>
-					<tr>
-						<th colspan="3" align="center">
-							<button> enviar </button>
-						</th>
-					</tr>
-				</tbody>
+					</tbody>
+					
+				</form>
 			</table>
-			<script>
-				var jsonObject1 = sessionStorage.getItem('student1');
-				var jsonObject2 = sessionStorage.getItem('student2');
-				var jsonObject3 = sessionStorage.getItem('student3');
-				var jsonObject4 = sessionStorage.getItem('student4');
-
-				console.log(sessionStorage.getItem('student1','student2','student3','student4'));
-				var ObjectStudent1 = JSON.parse(jsonObject1);
-				var ObjectStudent2 = JSON.parse(jsonObject2);
-				var ObjectStudent3 = JSON.parse(jsonObject3);
-				var ObjectStudent4 = JSON.parse(jsonObject4);
-
-				var name1 = ObjectStudent1[Object.keys(ObjectStudent1)[0]];
-				var lastName1 = ObjectStudent1[Object.keys(ObjectStudent1)[1]];
-				var name2 = ObjectStudent2[Object.keys(ObjectStudent2)[0]];
-				var lastName2 = ObjectStudent2[Object.keys(ObjectStudent2)[1]];
-				var name3 = ObjectStudent3[Object.keys(ObjectStudent3)[0]];
-				var lastName3 = ObjectStudent3[Object.keys(ObjectStudent3)[1]];
-				var name4 = ObjectStudent4[Object.keys(ObjectStudent4)[0]];
-				var lastName4 = ObjectStudent4[Object.keys(ObjectStudent4)[1]];
-
-				document.getElementById('name1').textContent=name1;
-				document.getElementById('lastName1').textContent=lastName1;
-				document.getElementById('name2').textContent=name2;
-				document.getElementById('lastName2').textContent=lastName2;
-				document.getElementById('name3').textContent=name3;
-				document.getElementById('lastName3').textContent=lastName3;
-				document.getElementById('name4').textContent=name4;
-				document.getElementById('lastName4').textContent=lastName4;
-			</script>
 		</div>
 	</body>
 </html>

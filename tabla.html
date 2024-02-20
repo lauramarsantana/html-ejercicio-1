@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Laura Santana</title>
-		<script type="text/javascript" src="java.js"></script>
 		<style>
 			*{
 				margin: 0;
@@ -54,7 +53,7 @@
 			button:hover{
 				background-color:#05607F;
 			}
-			button{
+			.button{
 				width: 20%;
 				height: 30px;
 				border-bottom: solid 2px rgba(255,255,255,0.4);
@@ -91,7 +90,7 @@
 			<br>
 			<br>
 			<table>
-				<form id="form" onsubmit="validarForm()" method="get">
+				<form id="form">
 					<thead align="center">
 						<tr>
 							<th colspan="3" align="center"> ESTUDIANTES </th>
@@ -105,31 +104,100 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td> <input type="text" id="name1" name="name1"> </td>
-							<td> <input type="text" id="lastname1" name="lastname1"> </td>
+							<td> Laura </td>
+							<td> Santana </td>
 							<th rowspan="5"> <img src="icono.png" width="100%"/> </th>
 						</tr>
 						<tr>
-							<td> <input type="text" id="name2" name="name2"> </td>
-							<td> <input type="text" id="lastname2" name="lastname2"> </td>
+							<td> David </td>
+							<td> Gonzalez </td>
 						</tr>
 						<tr>
-							<td> <input type="text" id="name3" name="name3"> </td>
-							<td> <input type="text" id="lastname3" name="lastname3"> </td>
+							<td> Danna </td>
+							<td> Perez </td>
 						</tr>
 						<tr>
-							<td> <input type="text" id="name4" name="name4"> </td>
-							<td> <input type="text" id="lastname4" name="lastname4"> </td>
+							<td> Pepito </td>
+							<td> perez </td>
 						</tr>
 						<tr>
-							<th colspan="3" align="center">
-								<button type="submit"> Enviar </button>
+							<th colspan="2" align="center">
+								<a href="tabla2.html">
+									<input class="button" type="button" value="Siguiente"> </input>
+								</a>
 							</th>
 						</tr>
 					</tbody>
 				</form>
-			</table>
-				//control k, control c, control k, control u
+			</table>	
+		</div>
+		<script>
+			function next(){
+				window.location.href="tabla2.html";
+			}
+		</script>
+		<div class="ordenado">
+			<h2 align="center"> HTML </h2>
+			<p> Html es un lenguaje de marcado que define una estructura al contenido que se quiere dar a conocer.
+
+				Estructura de la etiqueta:
+			</p>
+			<ol start="1">
+				<li> 
+					<strong> Etiqueta de apertura: </strong> este se basa en daler un nombre a un elemento,
+					ejemplo cuando quieres hacer un titulo usas el elemento (h) y lo encierras con parentisis angulares <> </h>
+				</li>
+				<li> 
+					<strong> Etiqueta de cierre: </strong> este es parecido al anterior pero en este caso
+					le agregamos un (/) antes de la palabra &lt;\h&gt;
+				</li>
+				<li> 
+					<strong> El contenido: </strong> este es el texto que va dentro de las etiquetas de
+					apertura y de cierre, ejemplo  &lt;h&gt; aqui va lo que quieres que se vea dentro 
+					de tu página &lt;\h&gt;
+				</li>
+				<li> 
+					<strong> El elemento: </strong> finalmente si tenemos en cuenta el conjunto de la etiqueta
+					de apertura, el contenido y la etiqueda de cierre, formaremos asi el elemento. 
+				</li>
+			</ol>
+		</div>
+		<div class="no_ordenado">
+			<h2 align="center"> CSS </h2>
+			<p> Es un lenguaje de hojas de estilo, es decir, 
+				te permite aplicar estilos y diseño a los elementos en documentos HTML. 
+
+				Anatomia de una regla CSS:
+			</p>
+			<ul>
+				<li> 
+					<strong> Selector: </strong> El elemento HTML en el que comienza la regla. 
+					Esta selecciona los elementos a aplicar el estilo (en este caso, los elementos &lt;h&gt; ).
+				</li>
+				<li> 
+					<strong> Declaración: </strong> Una sola regla como color: red; especifica a cuál
+					de las propiedades del elemento quieres dar estilo.
+				</li>
+				<li> 
+					<strong> Propiedades: </strong> Maneras en las cuales puedes dar estilo a un elemento HTML.
+					(En este caso, color es una propiedad del elemento &lt;p&gt;).
+				</li>
+				<li> 
+					<strong> Valor de la propiedad: </strong> A la derecha de la propiedad, después de los dos puntos (:), 
+					tienes el valor de la propiedad, (hay muchos valores para color además de red). 
+				</li>
+			</ul>
+		</div>
+		<div class="parrafo">
+			<h2 align="center"> JAVASCRIPT</h2>
+			<p> 
+				JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo 
+				(just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting 
+				(secuencias de comandos) para páginas web, y es usado en muchos entornos fuera del navegador, tal como 
+				Node.js, Apache CouchDB y Adobe Acrobat JavaScript es un lenguaje de programación basada en prototipos,
+				multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa 
+				y declarativa (por ejemplo programación funcional). Lee más en acerca de JavaScript.
+			</p>
 		</div>
 	</body>
 </html>
